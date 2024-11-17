@@ -172,7 +172,7 @@ class MpksSeeder extends Seeder
         ];
 
         foreach ($mpks as $mpk) {
-            Mpks::create($mpk);
+            Mpk::create($mpk);
         }
     }
 }
