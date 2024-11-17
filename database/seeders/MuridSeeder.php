@@ -15,7 +15,7 @@ class MuridSeeder extends Seeder
      */
     public function run(): void
     {
-        $user = User::create([
+        $Murid = Murid::create([
 
             "name" => "ayam",
             "voterId" => "500001",
@@ -25,9 +25,9 @@ class MuridSeeder extends Seeder
             "password" => bcrypt("ayam1234"),
         ]);
 
-        $user->assignRole("voter");
+        $Murid->assignRole("voter");
 
-        $user = User::create([
+        $Murid = Murid::create([
 
             "name" => "bebek",
             "voterId" => "500002",
@@ -36,9 +36,9 @@ class MuridSeeder extends Seeder
             "password" => bcrypt("bebek1234"),
         ]);
 
-        $user->assignRole("voter");
+        $Murid->assignRole("voter");
 
-        $user = User::create([
+        $Murid = Murid::create([
 
             "name" => "kuda",
             "voterId" => "500003",
@@ -47,7 +47,7 @@ class MuridSeeder extends Seeder
             "password" => bcrypt("kuda1234"),
         ]);
 
-        $user->assignRole("voter");
+        $Murid->assignRole("voter");
 
         // Path to your CSV file
         $filePath = database_path('data.csv');
@@ -61,7 +61,7 @@ class MuridSeeder extends Seeder
 
         foreach ($records as $record) {
             // Insert data into the database
-            $user = User::create([
+            $Murid = Murid::create([
 
                 "name" => $record['name'],
                 "voterId" => $record['email'],
@@ -70,11 +70,11 @@ class MuridSeeder extends Seeder
                 "password" => bcrypt($record['Password']),
             ]);
 
-            $user->assignRole("voter");
+            $Murid->assignRole("voter");
 
         }
 
         $this->command->info("Data imported successfully from {$filePath}.");
     }
 }
-DB::table('murids')->insert($user);
+DB::table('murids')->insert($Murid);
