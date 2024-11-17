@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HasilAnggota extends Model
+class HasilMpk extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'user_id',
-        'anggota_id',
+        'mpk_id',
     ];
 
     public function user()
@@ -21,6 +21,6 @@ class HasilAnggota extends Model
 
     public function anggota()
     {
-        return $this->belongsTo(Anggota::class);
+        return $this->belongsTo(Mpk::class);
     }
 }

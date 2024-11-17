@@ -16,6 +16,9 @@ return new class extends Migration
             $table->string('nama');
             $table->string('kelas');
             $table->string('kode');
+            $table->string('Password');
+            $table->string('classroom_encoded');
+            $table->string('unique_number');
             $table->timestamps();
         });
     }

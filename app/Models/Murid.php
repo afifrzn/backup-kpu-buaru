@@ -11,6 +11,10 @@ class Murid extends Model
 
     protected $fillable = [
         'nama',
-        'kode',
+        'email',
+        'classroom',
+        'Password',
+        'classroom_encoded',
+        'unique_number',
     ];
 }

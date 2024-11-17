@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('hasil_mpks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('murids');
-            $table->foreignId('anggota_id')->nullable()->constrained('mpks');
+            $table->foreignId('mpk_id')->nullable()->constrained('mpks');
             $table->timestamps();
         });
     }

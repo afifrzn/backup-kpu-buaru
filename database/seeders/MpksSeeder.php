@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Anggota;
+use App\Models\Mpk;
 
 class MpksSeeder extends Seeder
 {
@@ -172,7 +172,7 @@ class MpksSeeder extends Seeder
         ];
 
         foreach ($mpks as $mpk) {
-            Anggota::create($mpk);
+            Mpks::create($mpk);
         }
     }
 }
